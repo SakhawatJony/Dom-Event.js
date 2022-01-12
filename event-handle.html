@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="name-filed" type="text">
+    <button id="update-title">Update</button>
+    <p id="cliking-methode"></p>
+    <button onclick="justFunctionClick()">Just Funcation</button>
+    <button id="direact-title">Direact Function</button>
+
+    <script>
+        function justFunctionClick(){
+            const p = document.getElementById('cliking-methode');
+            p.innerText = 'Ami Tomake Onek Valobashi';
+        }
+
+        // direct
+
+        document.getElementById('direact-title').addEventListener('click', function(){
+         const nameFiled = document.getElementById('cliking-methode');
+         nameFiled.innerText = 'Ami Tomake ValoBashi Na ';
+
+         
+        })
+        // direct
+
+        document.getElementById('update-title').addEventListener('click', function(){
+         const nameFiled = document.getElementById('name-filed');
+
+         const p = document.getElementById('cliking-methode');
+            p.innerText = nameFiled.value;
+            nameFiled.value = '';
+        })
+    </script>
+</body>
+</html>
